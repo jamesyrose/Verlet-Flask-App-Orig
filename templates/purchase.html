@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Verlet</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="Affordable High Quality Market Data" name="description"/>
+        <meta content="Verlet Data" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="static/vendor/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+        <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="static/css/animate.css" rel="stylesheet">
+        <link href="static/vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- THEME STYLES -->
+        <link href="static/css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Video Background-->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="static/img/favicon.ico"/>
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body id="body">
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+                <!-- Navbar -->
+                <nav class="navbar" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="menu-container">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="toggle-icon"></span>
+                            </button>
+    
+                            <!-- Logo -->
+                            <div class="logo">
+                                <a class="logo-wrap" href="http://verlet.io/">
+                                    <img class="logo-img logo-img-main" src="static/img/logo_white.png">
+                                    <img class="logo-img logo-img-active" src="static/img/logo_dark.png">
+                                </a>
+                            </div>
+                            <!-- End Logo -->
+                        </div>
+    
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse nav-collapse">
+                            <div class="menu-container">
+                                <ul class="navbar-nav navbar-nav-right">
+                                    <li class="nav-item"><a class="nav-item-child nav-item-hover active" href="/#body">Home</a></li>
+                                    <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/#pricing">Pricing</a></li>
+                                    <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/about">About</a></li>
+                                    <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/getdata">Buy Data</a></li>
+                                    <li class="nav-item"><a class="nav-item-child nav-item-hover" href="/faq">FAQ</a></li>
+                                    <li class="nav-item"><a class="nav-item-child nav-item-hover" href="#footer">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Navbar Collapse -->
+                    </div>
+                </nav>
+                <!-- Navbar -->
+            </header>
+        <!--========== END HEADER ==========-->
+        <!--========== SLIDER ==========-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <div class="video-container">
+                        <video autoplay loop muted>
+                            <source src="/static/img/videos/ParticleEarth.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="container">
+                        <div class="carousel-centered ">
+                            <p><br><br><br><br><br><br><br><br><br></p>
+                            <div class="col-sm-6 sm-margin-b-30">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <h2 class="carousel-title">
+                                        Get Data
+                                    </h2>
+                                        <font size="+1" color="white">
+                                            “‘Data! Data! Data!’</font> <font color="white">  he cried impatiently. </font> <font size="+1" color="white"> ‘I can’t make bricks without clay.'” 
+                                        </font>
+                                        <font color="white"> 
+                                            <br/>
+                                            Sherlock Holmes, “The Adventure of the Copper Beeches”<br> <br>
+                                        </font>
+				    <h1> We have deprecated this feature. Sorry for the inconvience. <br>
+  					If you are looking to have an algorithm developed please <a 
+href="https://verelet.io/#footer">  contact  us<a> </h1> 
+				    <!--
+                                    <form method="POST">
+                                        <h4><font color ="white">Ticker Symbols</font></h4> 
+                                            <input name="symbols" align="right" placeholder="Comma Delimited Symbols" size="20"
+                                            class="form-control margin-b-10 color-white" STYLE="color: rgb(255, 255, 255); 
+                                            background-color: rgba(70, 70, 70, 0.35); font-size: 16px" required>
+                                        <h4><font color ="white">Starting Date</font></h4> 
+                                            <input name="start_date" align="right" placeholder="YYYY-MM-DD" size="20"
+                                            class="form-control margin-b-10 color-white" STYLE="color: rgb(255, 255, 255); 
+                                            background-color: rgb(70, 70, 70, .35); font-size: 16px" required>
+                                        <h4><font color ="white">Ending Date</font></h4> 
+                                            <input name="end_date" align="right" placeholder="YYYY-MM-DD" size="20" 
+                                            class="form-control margin-b-20 color-white" STYLE="color: rgb(255, 255, 255); 
+                                            background-color: rgb(70, 70, 70, .35); font-size: 16px" required>
+                                        <h4><font color ="white">Promo Code</font></h4>
+                                            <input name="promo" align="right" placeholder="Promo Code" size="20" 
+                                            class="form-control margin-b-10 color-white" STYLE="color: rgb(255, 255, 255); 
+                                            background-color: rgb(70, 70, 70, .35); font-size: 16px">
+                                        <h4><font color ="white">Resolution</font></h4> 
+                                            <select name="resolution" 
+                                            class="form-control margin-b-10 color-white" STYLE="color: rgb(255, 255, 255); 
+                                            background-color: rgb(70, 70, 70, .35); font-size: 16px">
+                                                <option value="Second">Second Resolution</option>
+                                                <option value="Minute">Minute Resolution</option>
+                                            </select>
+                                        <input type="submit" name="submit_button" value="Get Price" 
+                                        class="btn-theme btn-theme-sm btn-base-bg text-uppercase">
+                                    </form>
+                                        <p>&nbsp;<br>&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </p>
+				  --> 
+                                </div>
+                            </div>   
+                            <div class="col-sm-5 sm-margin-b-30">
+                                <div class="wow fadeInRightBig" data-wow-duration=".3" data-wow-delay=".3s">
+                                            {% autoescape false %}
+                                            {{ valid_values}}
+                                            {% endautoescape %}
+                                            {% autoescape false %}
+                                            {{ buy_button}}
+                                            {% endautoescape %}
+                                </div>           
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--========== SLIDER ==========-->
+        <!--========== ViewAvaliable ==========-->
+	<!--
+        <section id="service" class="bg-color-base">
+                <div class="bg-color-sky-light" data-auto-height="true"></div>
+                    <div class="content-lg container">
+                        <h2 align="center">Need More Info?</h2>
+                        <hr align="center" width="35%" size=10>
+                        <div class="row row-space-1 margin-b-2 ">
+                            <div class="col-sm-4 sm-margin-b-2">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <div class="service bg-color-sky-light2" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-envelope-letter"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>View Sample Data</h3>
+                                            <p class="margin-b-5">Sample data for SPY, USD-JPY, and BTC &nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                        </div>
+                                        <a href="https://storage.googleapis.com/verlet/sampleData.zip" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 sm-margin-b-2">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".2s">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-list"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>View Avaliable Data</h3>
+                                            <p class="margin-b-5">View avaliable symbols and date ranges for all stocks verlet offers&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                        </div>
+                                        <a href="/avadata" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".1s">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-graph"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>Need A Lot Of Data?</h3>
+                                            <p class="margin-b-5">Please Contact us for large data needs&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                                        </div>
+                                        <a href="#footer" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+            </section>  
+                        <!--// end row -->
+
+
+        <!--========== ViewAvaliable ==========-->
+
+
+
+        <!--========== FOOTER ==========-->
+    <section id="premade" class="bg-color-base">
+                <div class="bg-color-sky-light" data-auto-height="true"></div>
+                    <div class="content-lg container">
+                        <h2 align="center">Bulk Downloads</h2><span>
+ 			<p align='center'> Bigger Discounts, Faster Downloads</p>
+                        <hr align="center" width="35%" size=10>
+                        <div class="row row-space-1 margin-b-2 ">
+                            <div class="col-sm-12 sm-margin-b-2">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <div class="service bg-color-sky-light2" data-height="height">
+                                        <div class="service-info">
+                                            <h3 class="col-sm-9">Blue Chip<font size="-1"> (10 Years - 1Min OHLC)</font>
+                                            <p>Top 25 Blue Chip Stocks: <br> 
+						ADBE, AMZN, AXP, BA, BAC, BP, BRK.A, C, CMCSA, CRM, CSCO, GE, GM, GOOG, <br> 
+						HD, JNJ, JPM, KO, MA, MDT, NFLX, T, UNH, V, WFC
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></h3>
+                                            <h3><font size="-1">USD </font>$ 149.99</h3>
+						    <form action="/bulk" method='POST'> 
+						    <script src = 'https://checkout.stripe.com/checkout.js' class='stripe-button'" 
+						    data-key = 'pk_live_xIpwMFbQxbmgAL1RnmnPU3Id001v2VI6WJ' 
+						    data-amount = '14999' 
+						    data-name = 'Blue Chip Stocks' 
+						    data-discription = '' 
+						    data-image = 'static/logo.png' 
+						    data-locale = 'auto' >
+						    </script>
+						    <script>
+						    // Hide default stripe button, be careful there if you
+						    // have more than 1 button of that class
+                                                    document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+						    document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
+						    </script>
+                                                    <input type="hidden" name="bulk" value="blue">
+						    <input type="submit" name="submit_button" value="Buy Data Now!" 
+						    class="btn-theme btn-theme-sm btn-base-bg text-uppercase">
+						    </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+			<div class="row row-space-2 margin-b-2 ">
+                            <div class="col-sm-12 sm-margin-b-2">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <div class="service bg-color-sky-light2" data-height="height">
+                                        <div class="service-info">
+                                            <h3 class="col-sm-9">Tech<font size="-1"> (10 Years - 1Min OHLC)</font>
+                                            <p>Top 10 Tech Stock : <br> 
+						AAPL, AMZN, GOOG, IBM, INTC, MSFT, ORCL, QCOM, TSLA, V
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></h3>
+                                            <h3><font size="-1">USD </font>$ 59.99</h3>
+                                                    <form action="/bulk" method='POST'> 
+                                                    <script src = 'https://checkout.stripe.com/checkout.js' class='stripe-button'" 
+                                                    data-key = 'pk_live_xIpwMFbQxbmgAL1RnmnPU3Id001v2VI6WJ' 
+                                                    data-amount = '5999' 
+                                                    data-name = 'Tech Stocks' 
+                                                    data-discription = '' 
+                                                    data-image = 'static/logo.png' 
+                                                    data-locale = 'auto' >
+                                                    </script>
+                                                    <script>
+                                                    // Hide default stripe button, be careful there if you
+                                                    // have more than 1 button of that class
+                                                    document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
+                                                    document.getElementsByClassName("stripe-button-el")[2].style.display = 'none';
+                                                    </script>
+                                                    <input type="hidden" name="bulk" value="tech">
+                                                    <input type="submit" name="submit_button" value="Buy Data Now!" 
+                                                    class="btn-theme btn-theme-sm btn-base-bg text-uppercase">
+                                                    </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space-2 margin-b-2 ">
+                            <div class="col-sm-12 sm-margin-b-2">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <div class="service bg-color-sky-light2" data-height="height">
+                                        <div class="service-info">
+                                            <h3 class="col-sm-9">Pharmaceutical<font size="-1"> (10 Years - 1Min OHLC)</font>
+                                            <p>Top 10 Pharma  Stocks: <br>
+						ABY, AGN, BIOC, BMY, JNJ, MNK, MRK, NVO, NVS, PFE <br> 
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></h3>
+                                            <h3><font size="-1">USD </font>$ 59.99</h3>
+                                                    <form action="/bulk" method='POST'>
+                                                    <script src = 'https://checkout.stripe.com/checkout.js' class='stripe-button'" 
+                                                    data-key = 'pk_live_xIpwMFbQxbmgAL1RnmnPU3Id001v2VI6WJ' 
+                                                    data-amount = '5999' 
+                                                    data-name = 'Pharam Stocks' 
+                                                    data-discription = '' 
+                                                    data-image = 'static/logo.png' 
+                                                    data-locale = 'auto' >
+                                                    </script>
+                                                    <script>
+                                                    // Hide default stripe button, be careful there if you
+                                                    // have more than 1 button of that class
+                                                    document.getElementsByClassName("stripe-button-el")[2].style.display = 'none';
+                                                    document.getElementsByClassName("stripe-button-el")[3].style.display = 'none';
+                                                    </script>
+                                                    <input type="hidden" name="bulk" value="pharma">
+                                                    <input type="submit" name="submit_button" value="Buy Data Now!" 
+                                                    class="btn-theme btn-theme-sm btn-base-bg text-uppercase">
+                                                    </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space-2 margin-b-2 ">
+                            <div class="col-sm-12 sm-margin-b-2">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <div class="service bg-color-sky-light2" data-height="height">
+                                        <div class="service-info">
+                                            <h3 class="col-sm-9">Big Banks<font size="-1"> (10 Years - 1Min OHLC)</font>
+                                            <p>Top 10 Banks: <br>
+						BAC, BHLB, BK, BOH, C, COF, JPM, MS, USB, WFC<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></h3>
+                                            <h3><font size="-1">USD </font>$ 59.99</h3>
+                                                    <form action="/bulk" method='POST'>
+                                                    <script src = 'https://checkout.stripe.com/checkout.js' class='stripe-button'" 
+                                                    data-key = 'pk_live_xIpwMFbQxbmgAL1RnmnPU3Id001v2VI6WJ' 
+                                                    data-amount = '5999' 
+                                                    data-name = 'Big Banks'
+                                                    data-discription = '' 
+                                                    data-image = 'static/logo.png' 
+                                                    data-locale = 'auto' >
+                                                    </script>
+                                                    <script>
+                                                    // Hide default stripe button, be careful there if you
+                                                    // have more than 1 button of that class
+                                                    document.getElementsByClassName("stripe-button-el")[3].style.display = 'none';
+                                                    document.getElementsByClassName("stripe-button-el")[4].style.display = 'none';
+                                                    </script>
+                                                    <input type="hidden" name="bulk" value="banks">
+                                                    <input type="submit" name="submit_button" value="Buy Data Now!" 
+                                                    class="btn-theme btn-theme-sm btn-base-bg text-uppercase">
+                                                    </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-space-2 margin-b-2 ">
+                            <div class="col-sm-12 sm-margin-b-2">
+                                <div class="wow fadeInLeft" data-wow-duration=".3" data-wow-delay=".3s">
+                                    <div class="service bg-color-sky-light2" data-height="height">
+                                        <div class="service-info">
+                                            <h3 class="col-sm-9">Commodity ETF's<font size="-1"> (10 Years - 1Min OHLC)</font>
+                                            <p>Our Top 25 Commodity ETF's: <br> 
+                                                AGQ, ARLP, CORN, DBA, DBB, DBC, DBE, DBO, DGL, DGP, DJP, GCC, GLD, GSC, GSG, IAU,<br>
+						RJA, RJI, SCO, SGOL, SIVR, SLV, UGL, UNG, USO<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></h3>
+                                            <h3><font size="-1">USD </font>$ 59.99</h3>
+                                                    <form action="/bulk" method='POST'>
+                                                    <script src = 'https://checkout.stripe.com/checkout.js' class='stripe-button'" 
+                                                    data-key = 'pk_live_xIpwMFbQxbmgAL1RnmnPU3Id001v2VI6WJ' 
+                                                    data-amount = '5999' 
+                                                    data-name = 'ETF's' 
+                                                    data-discription = '' 
+                                                    data-image = 'static/logo.png' 
+                                                    data-locale = 'auto' >
+                                                    </script>
+                                                    <script>
+                                                    // Hide default stripe button, be careful there if you
+                                                    // have more than 1 button of that class
+                                                    document.getElementsByClassName("stripe-button-el")[4].style.display = 'none';
+                                                    document.getElementsByClassName("stripe-button-el")[5].style.display = 'none';
+                                                    </script>
+                                                    <input type="hidden" name="bulk" value="commodities">
+                                                    <input type="submit" name="submit_button" value="Buy Data Now!" 
+                                                    class="btn-theme btn-theme-sm btn-base-bg text-uppercase">
+                                                    </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+	-->
+        <section id=footer> 
+        <footer class="footer">
+
+            <!-- Links -->
+            <div class="footer-seperator">
+                <div class="content-lg container">
+                    <div class="row">
+                        <div class="col-sm-2 sm-margin-b-50">
+                            <!-- List -->
+                            <p>
+                                Products
+                            </p>
+                            <ul class="list-unstyled footer-list">
+                                <li class="footer-list-item"><a class="footer-list-link" href="#body">Minute OHLC</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="#about">Level 2 Quotes</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="/download">Re-Download Data</a></li>
+
+                            </ul>
+                            <p>
+                                Docs & Resources 
+                            </p>
+                            <ul class="list-unstyled footer-lst">
+                                <li class="footer-list-item"><a class="footer-list-link" href="#">Avaliable Data</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="#pricing">Pricing</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="#">FAQ</a></li>
+                            </ul>
+                            <p> 
+                                Company
+                            </p>
+                            <ul class="list-unstyled footer-lst">
+                                <li class="footer-list-item"><a class="footer-list-link" href="#body">Home</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="#about">About</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="#about">Careers</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="#footer">Contact</a></li>
+                            </ul>
+                            <!-- End List -->
+                        </div>
+                        <div class="col-sm-4 sm-margin-b-30">
+                            <!-- List -->
+                            <ul class="list-unstyled footer-list">
+                                <li class="footer-list-item"><a class="footer-list-link" href="https://twitter.com/Verlet52313321">Twitter</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="https://www.facebook.com/verletdata/">Facebook</a></li>
+                                <li class="footer-list-item"><a class="footer-list-link" href="https://www.linkedin.com/company/verletdata/">Linkedin</a></li>
+                            </ul>
+                            <!-- End List -->
+                        </div>
+                        <div class="col-sm-5 sm-margin-b-30 color-white">
+                            <h2 class="color-white">Send Us A Note</h2><b>
+                            <form method="POST">
+                            <input type="text" class="form-control margin-b-20 color-white" STYLE="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0, .4); font-size: 16px" placeholder="Name" name='name' required>
+                            <input type="email" class="form-control footer-input margin-b-20 color-white" STYLE="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0, .4); font-size: 16px" placeholder="Email" name='email'  required>
+                            <input type="text" class="form-control footer-input margin-b-20 color-white" STYLE="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0, .4); font-size: 16px" placeholder="Phone" name='phone' required>
+                            <textarea class="form-control footer-input margin-b-30 color-white" rows="6 " STYLE="color: rgb(255, 255, 255); background-color: rgb(0, 0, 0, .4); font-size: 16px" placeholder="Message" name='message' required></textarea>
+                            <button type="submit" name="sendnote" value="sendnote" class="btn-theme btn-theme-sm btn-base-bg text-uppercase">Submit</button><b>
+                            </form>
+
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+            <!-- End Links -->
+
+            <!-- Copyright -->
+            <div class="content container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img class="footer-logo" src="static/img/logo_white.png">
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <p class="margin-b-0">
+                            <a class="footer-list-link" href="/termsofuse">Terms of Use&nbsp;&nbsp;&nbsp;</a>
+                            <a class="footer-list-link" href="/privacypolicy">Privacy Policy &nbsp;&nbsp;&nbsp;</a>
+                            <a class="color-base fweight-700" href="http://verlet.io/">
+                                <font color="white">Verlet Data </font>
+                            </a> 
+                            &copy; Copyright 2020. All Rights Reserved
+                            
+                        </p>
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+            <!-- End Copyright -->
+        </footer>
+    </section>
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="static/vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="static/vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="static/vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="static/vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="static/vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="static/vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="static/vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="static/vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="static/vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="static/vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="static/js/layout.min.js" type="text/javascript"></script>
+        <script src="static/js/components/wow.min.js" type="text/javascript"></script>
+        <script src="static/js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="static/js/components/masonry.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
+</html>

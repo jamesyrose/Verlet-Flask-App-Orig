@@ -1,0 +1,85 @@
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.section h1 {
+  text-align: center;
+  font-size: 4rem;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.7;
+}
+.section h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.7;
+}
+.section h3 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.section h4 {
+  text-align: left;
+  font-size: 2rem;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.inner {
+  width: auto;
+  height: auto;
+  background-color: blue;
+  overflow:auto;
+}
+.video-overlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 10px;
+  padding: 5px 5px;
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #FFF;
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
